@@ -2,6 +2,7 @@
 """This module defines a class to manage file storage for hbnb clone"""
 import json
 
+
 class FileStorage:
     """This class manages storage of hbnb models in JSON format"""
     __file_path = 'file.json'
@@ -52,6 +53,10 @@ class FileStorage:
             pass
 
     def delete(self, obj=None):
-        """Deletes an object from __objects if it exists"""
-        if obj is not None and obj.__class__.__name__ + '.' + obj.id in self.__objects:
-            del self.__objects[obj.__class__.__name__ + '.' + obj.id]
+        """Deletes the object from __objects if it's inside.
+        If obj is equal to None, the method should not do anything.
+        """
+        if obj is not None:
+            key = obj.to_dict()['__class__'] + '.' + obj.id
+            if key in FileStorage.__objects:
+                del FileStorage.__objects[key]
