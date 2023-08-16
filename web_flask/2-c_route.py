@@ -39,7 +39,7 @@ def c_text(text):
 def python_text(text="is cool"):
     """
     Display "Python " followed by the value of the text variable
-    (replace underscores with spaces) when accessing the '/python/<text>' route.
+    (replace underscores with spaces) when accessing the '/python/<text>' route
     The default value of text is "is cool".
     """
     return "Python {}".format(escape(text).replace('_', ' '))
