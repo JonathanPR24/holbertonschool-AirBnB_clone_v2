@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-This is a simple Flask web application that displays "Hello HBNB!" on the root route.
+This is a simple Flask web application that displays "Hello HBNB!"
+on the root route.
 """
 
 from flask import Flask
