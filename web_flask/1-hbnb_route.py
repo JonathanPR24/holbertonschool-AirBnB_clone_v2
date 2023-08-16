@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-This is a simple Flask web application that displays different messages on different routes.
+This is a simple Flask web application that displays
+different messages on different routes.
 """
 
 from flask import Flask
@@ -15,6 +16,7 @@ def hello_hbnb():
     This route displays "Hello HBNB!" when accessed.
     """
     return "Hello HBNB!"
+
 
 @app.route('/hbnb', strict_slashes=False)
 def hbnb():
