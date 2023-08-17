@@ -3,7 +3,9 @@
 Module to manage file storage for hbnb clone
 """
 
+
 import json
+
 
 class FileStorage:
     """
@@ -18,7 +20,8 @@ class FileStorage:
         Returns a dictionary of models currently in storage.
 
         Args:
-            cls (type, optional): The class to filter objects. Defaults to None.
+            cls (type, optional): The class to filter objects.
+            Defaults to None.
 
         Returns:
             dict: A dictionary of models or filtered objects.
