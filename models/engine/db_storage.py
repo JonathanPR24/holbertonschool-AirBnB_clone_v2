@@ -2,7 +2,7 @@
 """ new class for sql storage """
 from os import getenv
 from sqlalchemy.orm import sessionmaker, scoped_session
-from sqlalchemy import (create_engine)
+from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from models.base_model import Base
 from models.state import State
@@ -68,7 +68,7 @@ class DBStorage:
         """delete an element in the table
         """
         if obj:
-            self.session.delete(obj)
+            self.__session.delete(obj)
 
     def reload(self):
         """configuration
@@ -79,6 +79,5 @@ class DBStorage:
         self.__session = Session()
 
     def close(self):
-        """ calls remove()
-        """
+        """ calls remove() or close() """
         self.__session.close()
